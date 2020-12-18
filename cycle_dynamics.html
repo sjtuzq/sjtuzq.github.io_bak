@@ -15,7 +15,7 @@
         font-size:15px;
         margin: 60px auto;
         width: auto;
-        max-width: 900px;
+        max-width: 1000px;
       }
 
       hr {
@@ -52,7 +52,7 @@
 
     
 
-    <center><span style="font-size:36px">Learning Cross-domain Correspondence for Control with Dynamics Cycle-consistency</span></center>
+    <center><span style="font-size:36px">Learning Cross-Domain Correspondence for Control with Dynamics Cycle-Consistency</span></center>
     <div class="gap-5"></div>
     <!--------------------- Author Names --------------------->
     <div class="row">
@@ -144,7 +144,9 @@
         </div>
       </div>
     </div>
+
     <br>
+
     <br>
     <!--------------------- teaser --------------------->
     <!-- <div class="gap-5"></div>
@@ -163,11 +165,10 @@
     <div class="gap-20"></div>
     <b><span style="font-size:20px">Abstract:</span></b><br>
     <div class="gap-5"></div>
-
-    <p> 
-      At the heart of many robotics problems is the challenge of learning correspondences across domains. For instance, imitation learning requires obtaining correspondence between humans and robots, sim-to-real requires correspondence between physics simulators and real robots, transfer learning requires correspondences between different robot environments. In this work, we propose to learn correspondence across such domains with an emphasis on differing modalities (vision and internal state), physics parameters (mass and friction), and morphologies (number of limbs). Importantly, correspondences are learned using unpaired and randomly collected data from the two domains. To do so, we propose dynamics cycles that align dynamic robotic behavior across two domains using a cycle consistency constraint. Once this correspondence is found, we can directly transfer the policy trained on one domain to the other, without needing any additional fine-tuning on the second domain. We perform experiments across a variety of problem domains both in simulation and on real robots. Particularly, our framework is able to align uncalibrated monocular video of a real robot arm to dynamic state-action trajectories of a simulated arm without paired data.      </div>
-    </p>
-    <!-- <hr> -->
+    <p>At the heart of many robotics problems is the challenge of learning correspondences across domains. 
+      For instance, imitation learning requires obtaining correspondence between humans and robots; sim-to-real requires correspondence between physics simulators and the real world; transfer learning requires correspondences between different robotics environments. 
+      This paper aims to learn correspondence across domains differing in representation (vision vs. internal state), physics parameters (mass and friction), and morphology (number of limbs). Importantly, correspondences are learned using unpaired and randomly collected data from the two domains. We propose \textit{dynamics cycles} that align dynamic robot behavior across two domains using a cycle-consistency constraint. Once this correspondence is found, we can directly transfer the policy trained on one domain to the other, without needing any additional fine-tuning on the second domain. We perform experiments across a variety of problem domains, both in simulation and on real robot. Our framework is able to align uncalibrated monocular video of a real robot arm to dynamic state-action trajectories of a simulated arm without paired data. 
+    </p><hr>
 
     <table align=center>
       <!-- <tr>
@@ -189,15 +190,18 @@
       </tr>
     </table>
     <br>
-    <hr>
+    <!-- <hr> -->
 
-    <br><br><br>
-    <hr>
+    <br><br><br><br>
     <table align=center width=800px>
       <center><h1>Real Xarm Robot Experiment Visualization</h1></center>
+      <hr>
+      <!-- <br> -->
       <tr>
         <left>
           <b style="color:dodgerblue">Estimate robot arm joint pose without any labels.</b>
+          <br>
+          <br>
           <!-- <b>(a)</b> Real image input;  
           <b>(b)</b> Our model prediciton;  
           <b>(c)</b> Cycle-GAN model prediction. -->
@@ -207,17 +211,20 @@
         <tr>
           <a href="./resources/gifs/xarm_updown.gif"><img src="./resources/gifs/xarm_updown.gif" width="100%"></a>
             <a href="./resources/gifs/xarm_leftright.gif"><img src="./resources/gifs/xarm_leftright.gif" width="100%"></a> 
+            <br>
+            <br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
             <b>(a)</b> Real image input;
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp; 
             <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
             <b>(b)</b>Our model prediciton;
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <!-- &nbsp;&nbsp;&nbsp;  -->
             <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  -->
             <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
@@ -227,15 +234,18 @@
         </table>
 
 
-        <br><br><hr>
+        <br><br><br>
         <table align=center width=800px>
         <center><h1>Cross morphology Policy Transfer</h1></center>
+        <hr>
         <tr>
           <left><b style="color:dodgerblue">Cross-morphology experiment visualization.</b>
             <!-- <b>(a)</b> Train a policy on the two-leg cheetah and test it on the three-leg cheetah. 
             <b>(b)</b> Train a  policy on three-limb swimmer and test it on a four-limb swimmer.   -->
             <b>Please notice that</b> there is no any new reward for fine-tuning during test time.</left>
       </tr>
+      <br>
+      <br>
         <center><table align=center width=1200px>
           <tr>
             <a href="./resources/gifs/cheetah_2.gif"><img src="./resources/gifs/cheetah_2.gif" width="23%"></a> 
@@ -244,16 +254,20 @@
             <a href="./resources/gifs/swimmer_3.gif"><img src="./resources/gifs/swimmer_3.gif" width="23%"></a> 
             <a href="./resources/gifs/swimmer_4.gif"><img src="./resources/gifs/swimmer_4.gif" width="23%"></a> 
           </tr>
+          <br>
+          <br>
           <b>(a)</b>Train a policy on two-leg cheetah and test on three-leg cheetah.
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;
           <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  -->
           <b>(b)</b>Train a policy on three-limb swimmer and test on four-limb.
           </table></center>
         </table>
 
-        <br><br><hr>
+        <br><br><br><br>
         <table align=center width=800px>
           <center><h1>HalfCheetah Training Process Visualization</h1></center>
+          <hr>
           <tr>
             <left><b style="color:dodgerblue">Estimated state visualization during training process:</b>
               <b>(a)</b> One random sampled image from the dataset.
@@ -263,25 +277,32 @@
               <b>Please notice that</b> there is no any paired data for training.
             </left>
         </tr>
+        <br>
+        <br>
           <center><table align=center width=1200px>
             <tr>
               <a href="./resources/gifs/training.gif"><img src="./resources/gifs/training.gif" width="103%"></a> </tr>
-              &nbsp; &nbsp;&nbsp; &nbsp;             
+              &nbsp; &nbsp;&nbsp; &nbsp;   
+              <br>
+              <!-- <br>           -->
               <b>(a)</b> One random sampled image.
               <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   -->
               <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  -->
               <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  -->
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;
-              <b>(b)</b> Estimate the state and rerender the image.
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <b>(b)</b> Estimate the state and rerender the image.
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;
               <b>(c)</b> (L1 error)---(training iteration) curve.
             </table></center>
           </table>
         
         
-        <br><br><hr>
+        <br><br><br><br>
         <table align=center width=800px>
           <center><h1>HalfCheetah State Estimation Comparison</h1></center>
+          <hr>
           <tr>
             <left><b style="color:dodgerblue">Self-supervised state estimation visualization:</b>
               estimate the state from image observation and rerender the new image. 
@@ -289,15 +310,20 @@
               <!-- <b>(b)</b> Cycle-GAN baseline results. -->
             </left>
         </tr>
+        <br>
+        <br>
           <center><table align=center width=1200px>
             <tr>
               <a href="./resources/gifs/after.gif"><img src="./resources/gifs/after.gif" width="46%"></a> &nbsp; &nbsp;
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <a href="./resources/gifs/before.gif"><img src="./resources/gifs/before.gif" width="46%"></a>
+              <br>
+              <br>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <b>(a)</b> Our (Cycle-Dynamics) experiment results.
-              &nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
