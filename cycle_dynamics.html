@@ -164,23 +164,9 @@
     <b><span style="font-size:20px">Abstract:</span></b><br>
     <div class="gap-5"></div>
 
-    <p> At the heart of many robotics problems is the challenge of learning correspondences
-      across domains. For instance, imitation learning requires obtaining correspondence
-      between humans and robots, sim-to-real requires correspondence between physics
-      simulators and real robots, transfer learning requires correspondences between
-      different robot environments. In this work, we propose to learn correspondence
-      across such domains with an emphasis on differing modalities (vision and internal
-      state), physics parameters (mass and friction), and morphologies (number of limbs).
-      Importantly, correspondences are learned using unpaired and randomly collected
-      data from the two domains. To do so, we propose dynamics cycles that align
-      dynamic robotic behavior across two domains using a cycle consistency constraint.
-      Once this correspondence is found, we can directly transfer the policy trained
-      on one domain to the other, without needing any additional fine-tuning on the
-      second domain. We perform experiments across a variety of problem domains
-      both in simulation and on real robots. Particularly, our framework is able to
-      align uncalibrated monocular video of a real robot arm to dynamic state-action
-      trajectories of a simulated arm without paired data.      </div>
-</p>
+    <p> 
+      At the heart of many robotics problems is the challenge of learning correspondences across domains. For instance, imitation learning requires obtaining correspondence between humans and robots, sim-to-real requires correspondence between physics simulators and real robots, transfer learning requires correspondences between different robot environments. In this work, we propose to learn correspondence across such domains with an emphasis on differing modalities (vision and internal state), physics parameters (mass and friction), and morphologies (number of limbs). Importantly, correspondences are learned using unpaired and randomly collected data from the two domains. To do so, we propose dynamics cycles that align dynamic robotic behavior across two domains using a cycle consistency constraint. Once this correspondence is found, we can directly transfer the policy trained on one domain to the other, without needing any additional fine-tuning on the second domain. We perform experiments across a variety of problem domains both in simulation and on real robots. Particularly, our framework is able to align uncalibrated monocular video of a real robot arm to dynamic state-action trajectories of a simulated arm without paired data.      </div>
+    </p>
     <!-- <hr> -->
 
     <table align=center>
@@ -212,9 +198,10 @@
       <tr>
         <left>
           <b style="color:dodgerblue">Estimate robot arm joint pose without any labels.</b>
-          <b>(a)</b> Real image input;  
+          <!-- <b>(a)</b> Real image input;  
           <b>(b)</b> Our model prediciton;  
-          <b>(c)</b> Cycle-GAN model prediction.</left>
+          <b>(c)</b> Cycle-GAN model prediction. -->
+        </left>
     </tr>
       <center><table align=center width=1200px>
         <tr>
@@ -244,9 +231,9 @@
         <table align=center width=800px>
         <center><h1>Cross morphology Policy Transfer</h1></center>
         <tr>
-          <left><b style="color:dodgerblue">Cross-morphology experiment visualization:</b>
-            <b>(a)</b> Train a policy on the two-leg cheetah and test it on the three-leg cheetah. 
-            <b>(b)</b> Train a  policy on three-limb swimmer and test it on a four-limb swimmer.  
+          <left><b style="color:dodgerblue">Cross-morphology experiment visualization.</b>
+            <!-- <b>(a)</b> Train a policy on the two-leg cheetah and test it on the three-leg cheetah. 
+            <b>(b)</b> Train a  policy on three-limb swimmer and test it on a four-limb swimmer.   -->
             <b>Please notice that</b> there is no any new reward for fine-tuning during test time.</left>
       </tr>
         <center><table align=center width=1200px>
@@ -298,8 +285,9 @@
           <tr>
             <left><b style="color:dodgerblue">Self-supervised state estimation visualization:</b>
               estimate the state from image observation and rerender the new image. 
-              <b>(a)</b> Our (Cycle-Dynamics) experiment results.  
-              <b>(b)</b> Cycle-GAN baseline results.</left>
+              <!-- <b>(a)</b> Our (Cycle-Dynamics) experiment results.   -->
+              <!-- <b>(b)</b> Cycle-GAN baseline results. -->
+            </left>
         </tr>
           <center><table align=center width=1200px>
             <tr>
