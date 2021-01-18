@@ -129,21 +129,31 @@
     <!--------------------- paper and code link --------------------->
     <div class="gap-5"></div>
     <div class="row">
-      <div class="col-md-4">
+      <div class="col-md-3">
       </div>
+
       <div class="col-md-2">
         <center><span style="font-size:16px">
           <a href="https://arxiv.org/abs/2012.09811">[arXiv]</a>
         </span></center>
       </div>
+
       <div class="col-md-2">
         <center><span style="font-size:16px">
-          <a href="https://sjtuzq.github.io/cycle_dynamics.html">[code(soon)]</a>
+          <a href="https://openreview.net/forum?id=QIRlze3I6hX">[ICLR 2021 Oral]</a>
+        </span></center>
+      </div>
+
+      <div class="col-md-2">
+        <center><span style="font-size:16px">
+          <a href="https://github.com/sjtuzq/Cycle_Dynamics">[code]</a>
         </span></center>
         <div class="col-md-4">
         </div>
       </div>
     </div>
+
+    
 
     <br>
 
@@ -165,9 +175,9 @@
     <div class="gap-20"></div>
     <b><span style="font-size:20px">Abstract:</span></b><br>
     <div class="gap-5"></div>
-    <p>At the heart of many robotics problems is the challenge of learning correspondences across domains. 
+    <p align="justify">At the heart of many robotics problems is the challenge of learning correspondences across domains. 
       For instance, imitation learning requires obtaining correspondence between humans and robots; sim-to-real requires correspondence between physics simulators and the real world; transfer learning requires correspondences between different robotics environments. 
-      This paper aims to learn correspondence across domains differing in representation (vision vs. internal state), physics parameters (mass and friction), and morphology (number of limbs). Importantly, correspondences are learned using unpaired and randomly collected data from the two domains. We propose \textit{dynamics cycles} that align dynamic robot behavior across two domains using a cycle-consistency constraint. Once this correspondence is found, we can directly transfer the policy trained on one domain to the other, without needing any additional fine-tuning on the second domain. We perform experiments across a variety of problem domains, both in simulation and on real robot. Our framework is able to align uncalibrated monocular video of a real robot arm to dynamic state-action trajectories of a simulated arm without paired data. 
+      This paper aims to learn correspondence across domains differing in representation (vision vs. internal state), physics parameters (mass and friction), and morphology (number of limbs). Importantly, correspondences are learned using unpaired and randomly collected data from the two domains. We propose dynamics cycles that align dynamic robot behavior across two domains using a cycle-consistency constraint. Once this correspondence is found, we can directly transfer the policy trained on one domain to the other, without needing any additional fine-tuning on the second domain. We perform experiments across a variety of problem domains, both in simulation and on real robot. Our framework is able to align uncalibrated monocular video of a real robot arm to dynamic state-action trajectories of a simulated arm without paired data. 
     </p><hr>
 
     <table align=center>
@@ -221,14 +231,14 @@
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             &nbsp;&nbsp;&nbsp;&nbsp; 
             <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
-            <b>(b)</b>Our model prediciton;
+            <b>(b)</b> Our model prediciton;
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <!-- &nbsp;&nbsp;&nbsp;  -->
             <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  -->
             <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
-            <b>(c)</b>Cycle-GAN model prediction.
+            <b>(c)</b> Cycle-GAN model prediction.
           </tr>
           </table></center>
         </table>
@@ -256,11 +266,11 @@
           </tr>
           <br>
           <br>
-          <b>(a)</b>Train a policy on two-leg cheetah and test on three-leg cheetah.
+          <b>(a)</b> Train a policy on two-leg cheetah and test on three-leg cheetah.
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           &nbsp;&nbsp;&nbsp;&nbsp;
           <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  -->
-          <b>(b)</b>Train a policy on three-limb swimmer and test on four-limb.
+          <b>(b)</b> Train a policy on three-limb swimmer and test on four-limb.
           </table></center>
         </table>
 
@@ -285,11 +295,12 @@
               &nbsp; &nbsp;&nbsp; &nbsp;   
               <br>
               <!-- <br>           -->
+              &nbsp;&nbsp; &nbsp; 
               <b>(a)</b> One random sampled image.
               <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   -->
               <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  -->
               <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  -->
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <b>(b)</b> Estimate the state and rerender the image.
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -368,11 +379,14 @@
 
     <b><span style="font-size:20px">Bibtex:</span></b><br>
     <div class="gap-10"></div>
-    <pre>  @article{zhang2020learning,
-        title={Learning Cross-Domain Correspondence for Control with Dynamics Cycle-Consistency},
-        author={Qiang Zhang, Tete Xiao, Alyosha Efros, Lerrel Pinto, Xiaolong Wang.},
-        journal={arXiv preprint arXiv:2012.09811},
-        year={2020}
+    <pre>   
+      @inproceedings{
+          zhang2021learning,
+          title={Learning Cross-Domain Correspondence for Control with Dynamics Cycle-Consistency},
+          author={Qiang Zhang and Tete Xiao and Alexei A Efros and Lerrel Pinto and Xiaolong Wang},
+          booktitle={International Conference on Learning Representations},
+          year={2021},
+          url={https://openreview.net/forum?id=QIRlze3I6hX}
       }
     </pre>
     <hr>
